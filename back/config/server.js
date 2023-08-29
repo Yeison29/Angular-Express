@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import { exports } from "./default.js";
 import router from "../routes/index.routes.js";
 import pgService from "../services/pg.services.js";
+import Middlewares from "../middleware/index.middleware.js";
 
 export default class Server{
 
@@ -17,6 +18,7 @@ export default class Server{
 
     middleware(){
         this.app.use(bodyParser.json());
+        this.app.use(Middlewares)
     }
 
     route(){
