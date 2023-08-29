@@ -1,20 +1,6 @@
 # Angular-Express
 Proyecto de clases de Angular y express
 
-###> CONFIG SERVER <####
-PORT=3200
-###> CONFIG SERVER <####
-
-###> DB_CONNECTION ### 
-DB_URL_PG=postgres://postgres:ADMIN@localhost:5432/prueba
-###< CONFIGURE SERVER ###
-
-###> SECRET_KEY ###
-SECRET_KEY=
-###< SECRET_KEY ###
-
-esto va en el .env
-
 ## Requerimientos
 
 - Node js
@@ -70,3 +56,25 @@ Si el comando genera un error de permisos ejecutar el siguiente comando en Windo
    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
+###> CONFIG SERVER <####
+PORT=3200
+###> CONFIG SERVER <####
+
+###> DB_CONNECTION ### 
+DB_URL_PG=postgres://postgres:ADMIN@localhost:5432/prueba
+###< CONFIGURE SERVER ###
+
+###> SECRET_KEY ###
+SECRET_KEY=
+###< SECRET_KEY ###
+
+esto va en el .env
+
+CREATE TABLE producto(
+	id_producto serial,
+	nombre varchar(500),
+	detalle varchar(1000),
+	CONSTRAINT pk_id_producto PRIMARY KEY (id_producto)
+)
+
+ 
