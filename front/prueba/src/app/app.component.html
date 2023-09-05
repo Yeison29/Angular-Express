@@ -1,0 +1,48 @@
+<h2>Hola Mundo</h2>
+
+<app-componente></app-componente>
+<app-primero nombre="Yeison"></app-primero>
+
+<button type="button" (click)="cambiarTitle()"> Enviar </button>
+<br>
+<button type="button" [class]="bgColor" (click)="cambiarColor()"> color </button>
+<span [class]="color"><h1>Color!!!</h1></span>
+<span [class]="{
+  rojo:true,
+  bgAzul:true
+}">Color!!!</span>
+<div [ngSwitch]="numero">
+  <span *ngSwitchCase="1">uno</span>
+  <span *ngSwitchCase="2">dos</span>
+  <span *ngSwitchCase="3">tres</span>
+  <span *ngSwitchCase="4">cuatro</span>
+</div>
+
+<ul>
+  <li *ngFor=" let p of persona">
+    {{p.nombre}}
+  </li>
+</ul>
+
+<button type="button" (click)="cambiarState1()"> Cambiar </button>
+<div *ngIf="ban">
+  <h2>
+    Activo
+  </h2>
+</div>
+<!-- <div *ngIf="ban==true">
+  <h2>
+    Activo
+  </h2>
+</div> -->
+<button type="button" (click)="cambiarState()"> Cambiar </button>
+<div>
+  <h2>
+    {{ban}}
+  </h2>
+</div>
+<p>
+  {{title}}
+  {{persona | json}}
+</p>
+<p></p>
