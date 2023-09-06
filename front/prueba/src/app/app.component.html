@@ -6,7 +6,9 @@
 <button type="button" (click)="cambiarTitle()"> Enviar </button>
 <br>
 <button type="button" [class]="bgColor" (click)="cambiarColor()"> color </button>
-<span [class]="color"><h1>Color!!!</h1></span>
+<span [class]="color">
+  <h1>Color!!!</h1>
+</span>
 <span [class]="{
   rojo:true,
   bgAzul:true
@@ -25,7 +27,7 @@
 </ul>
 
 <button type="button" (click)="cambiarState1()"> Cambiar </button>
-<div *ngIf="ban">
+<div *ngIf="ba">
   <h2>
     Activo
   </h2>
@@ -35,6 +37,7 @@
     Activo
   </h2>
 </div> -->
+<br>
 <button type="button" (click)="cambiarState()"> Cambiar </button>
 <div>
   <h2>
