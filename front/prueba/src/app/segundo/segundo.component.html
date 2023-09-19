@@ -1,0 +1,24 @@
+<div ngClass="container">
+    <div ngClass="container-formulario">
+        <h1>Formulario</h1>
+        <form (ngSubmit)="enviar()" action="" #form="ngForm">
+            <div ngClass="groupInput">
+                <label for="nombre">Nombre</label>
+                <input required type="text" name="nombre" id="nombre" [(ngModel)]="formulario.nombre" #nombre="ngModel">
+                <span ngClass="error" *ngIf="nombre.invalid && nombre.dirty">Nombre Requerido</span>
+            </div>
+            <div ngClass="groupInput">
+                <label for="valor">Valor</label>
+                <input required type="text" name="valor" id="valor" [(ngModel)]="formulario.valor"  #valor="ngModel">
+                <span ngClass="error" *ngIf="valor.invalid && valor.pristine">Valor Requerido</span>
+            </div>
+            <div>
+                <button type="submit" [disabled]="nombre.invalid || valor.invalid">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<br><br>
+{{form.value | json}} <br>
+{{form.invalid | json}} <br>
+{{form.valid | json}}
